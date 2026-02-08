@@ -11,7 +11,6 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: #f4f4f4;
-  color: #111;
 }
 
 #jumpMenu {
@@ -20,30 +19,27 @@ body {
   left: 0;
   width: var(--menuW);
   height: 100vh;
-  overflow-y: auto;
   background: #c9951a;
-  padding: 18px 14px;
-  border-right: 2px solid #000;
+  padding: 20px 15px;
+  border-right: 2px solid black;
 }
 
 #jumpMenu h2 {
-  margin: 0 0 14px;
-  font-size: 28px;
   text-align: center;
+  font-size: 26px;
 }
 
 #jumpMenu a {
   display: block;
-  padding: 10px 6px;
-  color: #0022ff;
-  text-decoration: underline;
+  margin: 10px 0;
   font-size: 18px;
+  color: blue;
+  text-decoration: underline;
 }
 
 main {
   margin-left: var(--menuW);
-  min-height: 100vh;
-  padding: calc(var(--headerH) + 24px) 26px 120px;
+  padding: calc(var(--headerH) + 30px) 30px 120px;
 }
 
 main > header {
@@ -52,115 +48,80 @@ main > header {
   left: var(--menuW);
   width: calc(100% - var(--menuW));
   height: var(--headerH);
-  z-index: 10;
-  background: #ff0000;
-  border-bottom: 2px solid #000;
+  background: red;
+  border-bottom: 2px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
 }
 
 main > header > p {
-  margin: 18px 0 10px;
-  text-align: center;
   font-size: 34px;
+  margin: 20px 0 10px;
   font-style: italic;
-  font-weight: normal;
 }
 
 main > header > nav {
   display: flex;
   justify-content: center;
-  gap: 34px;
-  padding: 10px 10px 16px;
-  background: #000;
+  gap: 30px;
+  background: black;
+  width: 100%;
+  padding: 15px 0;
 }
 
-main > header button {
-  width: 260px;
-  max-width: 28vw;
-  padding: 16px 10px;
-  background: #0a22ff;
-  color: #fff;
-  border: 2px solid #000;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-main > header button:hover {
-  filter: brightness(0.95);
+main > header > nav a {
+  background: blue;
+  color: white;
+  border: 2px solid black;
+  padding: 15px 25px;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 main > h1 {
   text-align: center;
-  font-size: 52px;
-  margin: 0 0 22px;
+  font-size: 48px;
+  margin-bottom: 30px;
   font-family: "Times New Roman", Times, serif;
 }
 
 #container {
   display: flex;
   flex-wrap: wrap;
-  gap: 26px;
+  gap: 30px;
   justify-content: center;
-  align-items: flex-start;
 }
 
 #container article {
   width: 300px;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 14px 14px 10px;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
 }
 
 #container article h2 {
-  margin: 0 0 10px;
-  font-size: 22px;
+  margin-top: 0;
 }
 
 #container article p {
-  margin: 10px 0;
-  line-height: 1.35;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 #thanks {
   position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 20;
-  margin: 0;
-  padding: 22px 36px;
+  right: 20px;
+  bottom: 20px;
   background: #8fd0ff;
-  border: 2px solid #2b6f99;
+  padding: 20px 40px;
+  font-size: 36px;
   font-family: "Times New Roman", Times, serif;
-  font-size: 38px;
+  border: 2px solid #2b6f99;
 }
 
 footer {
   margin-top: 40px;
-  padding: 20px 10px;
-  border-top: 1px solid #ddd;
-}
-
-@media (max-width: 700px) {
-  :root {
-    --menuW: 170px;
-    --headerH: 140px;
-  }
-
-  main > header button {
-    width: 160px;
-    font-size: 16px;
-    padding: 12px 8px;
-  }
-
-  main > h1 {
-    font-size: 40px;
-  }
-
-  #thanks {
-    font-size: 28px;
-    padding: 16px 22px;
-  }
+  padding: 20px;
+  text-align: center;
 }
