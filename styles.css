@@ -57,13 +57,15 @@ main > header {
   border-bottom: 2px solid #000;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
 }
 
 main > header > p {
   margin: 18px 0 10px;
+  text-align: center;
   font-size: 34px;
   font-style: italic;
+  font-weight: normal;
 }
 
 main > header > nav {
@@ -72,20 +74,20 @@ main > header > nav {
   gap: 34px;
   padding: 10px 10px 16px;
   background: #000;
-  width: 100%;
 }
 
-main > header > nav a {
-  display: inline-block;
+main > header button {
+  width: 260px;
+  max-width: 28vw;
+  padding: 16px 10px;
   background: #0a22ff;
   color: #fff;
   border: 2px solid #000;
-  padding: 16px 26px;
   font-size: 22px;
-  text-decoration: none;
+  cursor: pointer;
 }
 
-main > header > nav a:hover {
+main > header button:hover {
   filter: brightness(0.95);
 }
 
@@ -122,10 +124,6 @@ main > h1 {
   font-size: 13px;
 }
 
-#container article a {
-  color: #0b57d0;
-}
-
 #thanks {
   position: fixed;
   right: 18px;
@@ -145,27 +143,16 @@ footer {
   border-top: 1px solid #ddd;
 }
 
-footer address {
-  font-style: normal;
-}
-
-footer address div {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 8px 12px;
-  max-width: 520px;
-  margin: 0 auto;
-}
-
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   :root {
     --menuW: 170px;
     --headerH: 140px;
   }
 
-  main > header > nav a {
+  main > header button {
+    width: 160px;
     font-size: 16px;
-    padding: 12px 16px;
+    padding: 12px 8px;
   }
 
   main > h1 {
@@ -175,9 +162,5 @@ footer address div {
   #thanks {
     font-size: 28px;
     padding: 16px 22px;
-  }
-
-  #container article {
-    width: 280px;
   }
 }
